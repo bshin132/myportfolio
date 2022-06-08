@@ -10,3 +10,11 @@ if (navToggle) {
     navMenu.classList.add("show-menu");
   });
 }
+
+//MENU HIDE
+//VALIDATE IF CONSTANT EXISTS
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
