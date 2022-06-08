@@ -145,13 +145,13 @@ img {
     align-items: center;
 }
 
-/* .nav__logo,
+.nav__logo,
 .nav__toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
-} */
+}
 
-/* .nav__logo:hover {
+.nav__logo:hover {
     color: var(--first-color);
 }
 
@@ -211,9 +211,9 @@ img {
 
 .nav__close:hover {
     color: var(--first-color-alt);
-} */
+}
 
 /* SHOW MENU */
-/* .show-menu {
+.show-menu {
     bottom: 0;
-} */
+}
