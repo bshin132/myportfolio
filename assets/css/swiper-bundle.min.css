@@ -647,3 +647,12 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
   overflow: hidden;
 }
+
+@media screen and (min-width: 1024px) {
+  .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -4.5rem;
+}
+}
