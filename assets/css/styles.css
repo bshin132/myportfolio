@@ -1,11 +1,12 @@
-/* GOOGLE FONTS */
+/*==================== GOOGLE FONTS ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+/*==================== VARIABLES CSS ====================*/
 :root {
   --header-height: 3rem;
-
-  /* COLOR */
+  /*========== Colors ==========*/
   --hue-color: 218;
+  /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -16,9 +17,12 @@
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-  /* FONT AND TYPOGRAHY */
+  /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -26,10 +30,13 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
 
-  /* MARGINS BOTTOM */
+  /*========== Margenes Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -39,13 +46,13 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
-  /* Z-INDEX */
+  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
 
-/* FONT SIZE FOR LARGE DEVICES */
+/* Font size for large devices */
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3rem;
@@ -58,7 +65,37 @@
   }
 }
 
-/* BASE */
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  /* HSL color mode */
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hsl(var(--hue-color), 29%, 16%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
+/*========== Button Dark/Light ==========*/
+.nav__btns {
+  display: flex;
+  align-items: center;
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+}
+
+.change-theme:hover {
+  color: var(--first-color);
+}
+
+/*==================== BASE ====================*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -81,7 +118,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--text-color);
+  color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
 
@@ -98,14 +135,13 @@ img {
   height: auto;
 }
 
-/* REUSABLE CSS CLASSES */
+/*==================== REUSABLE CSS CLASSES ====================*/
 .section {
   padding: 2rem 0 4rem;
 }
 
 .section__title {
   font-size: var(--h1-font-size);
-  color: var(--title-color);
 }
 
 .section__subtitle {
@@ -119,7 +155,7 @@ img {
   text-align: center;
 }
 
-/* LAYOUT */
+/*==================== LAYOUT ====================*/
 .container {
   max-width: 768px;
   margin-left: var(--mb-1-5);
@@ -140,7 +176,7 @@ img {
   background-color: var(--body-color);
 }
 
-/* NAV */
+/*==================== NAV ====================*/
 .nav {
   max-width: 968px;
   height: var(--header-height);
@@ -155,7 +191,6 @@ img {
   font-weight: var(--font-medium);
 }
 
-/* show menu */
 .nav__logo:hover {
   color: var(--first-color);
 }
@@ -217,23 +252,23 @@ img {
 .nav__close:hover {
   color: var(--first-color-alt);
 }
-/* SHOW MENU */
+
+/* show menu */
 .show-menu {
   bottom: 0;
 }
 
-/* ACTIVE LINK */
+/* Active link */
 .active-link {
   color: var(--first-color);
 }
 
-
-/* CHANGE BG HEADER */
+/* Change background header */
 .scroll-header {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* HOME */
+/*==================== HOME ====================*/
 .home__container {
   gap: 1rem;
 }
@@ -274,7 +309,6 @@ img {
 
 .home__title {
   font-size: var(--big-font-size);
-  color: #000;
 }
 
 .home__subtitle {
@@ -316,7 +350,7 @@ img {
   font-size: 1.25rem;
 }
 
-/* BUTTONS */
+/*==================== BUTTONS ====================*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -342,7 +376,7 @@ img {
 }
 
 .button--white:hover {
-  background-color: rgba(255, 255, 255, 0.753);
+  background-color: #fff;
 }
 
 .button--flex {
@@ -365,7 +399,7 @@ img {
   color: var(--first-color-alt);
 }
 
-/* ABOUT */
+/*==================== ABOUT ====================*/
 .about__img {
   width: 200px;
   border-radius: 0.5rem;
@@ -405,7 +439,7 @@ img {
   justify-content: center;
 }
 
-/* SKILLS */
+/*==================== SKILLS ====================*/
 .skills__container {
   row-gap: 0;
 }
@@ -427,15 +461,12 @@ img {
   margin-right: var(--mb-0-75);
 }
 
-#black {
-  color: #000;
-}
-
 .skills__title {
   font-size: var(--h3-font-size);
 }
 
 .skills__subtitle {
+  font-size: var(--smaller-font-size);
   font-size: var(--small-font-size);
   color: var(--text-color-light);
 }
@@ -538,7 +569,7 @@ img {
   transform: rotate(-180deg);
 }
 
-/* QUALIFICATION */
+/*==================== QUALIFICATION ====================*/
 .qualification__tabs {
   display: flex;
   justify-content: space-evenly;
@@ -610,7 +641,12 @@ img {
   color: var(--first-color);
 }
 
-/* SERVICES */
+.qualification__tech {
+  border-bottom: 3px solid var(--first-color-alt);
+  border-radius: 0.2rem;
+}
+
+/*==================== SERVICES ====================*/
 .services__container {
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
@@ -675,7 +711,7 @@ img {
   border-radius: 0.5rem;
 }
 
-.services__modal-services {
+.services__modal-service {
   row-gap: 1rem;
 }
 
@@ -703,12 +739,13 @@ img {
   margin-right: var(--mb-0-25);
 }
 
+/* Active Modal */
 .active-modal {
   opacity: 1;
   visibility: visible;
 }
 
-/* PORTFOLIO */
+/*==================== PORTFOLIO ====================*/
 .portfolio__container {
   overflow: initial;
 }
@@ -768,7 +805,7 @@ img {
   outline: none;
 }
 
-/* PROJECT IN MIND */
+/*==================== PROJECT IN MIND ====================*/
 .project {
   text-align: center;
 }
@@ -797,8 +834,7 @@ img {
   justify-self: center;
 }
 
-
-/* CONTACT */
+/*==================== CONTACT ME ====================*/
 .contact__container {
   row-gap: 3rem;
 }
@@ -846,7 +882,7 @@ img {
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
 
-/* FOOTER */
+/*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;
 }
@@ -902,7 +938,7 @@ img {
   color: #fff;
 }
 
-/* SCROLL UP */
+/*========== SCROLL UP ==========*/
 .scrollup {
   position: fixed;
   right: 1rem;
@@ -924,8 +960,7 @@ img {
   color: #fff;
 }
 
-/* SHOW SCROLL */
-
+/* Show scroll */
 .show-scroll {
   bottom: 5rem;
 }
