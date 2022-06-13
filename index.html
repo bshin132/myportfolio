@@ -861,22 +861,22 @@
             </div>
           </div>
 
-          <form action="" class="contact__form grid">
+          <form action="https://formsubmit.co/bshin132@gmail.com" class="contact__form grid" method="POST">
             <div class="contact__inputs grid">
               <div class="contact__content">
                 <label for="name" class="contact__label">Name</label>
-                <input type="text" id="name" class="contact__input" />
+                <input type="text" id="name" name="name" class="contact__input" required/>
               </div>
 
               <div class="contact__content">
                 <label for="email" class="contact__label">Email</label>
-                <input type="email" id="email" class="contact__input" />
+                <input type="email" id="email" name="email" class="contact__input" required/>
               </div>
             </div>
 
             <div class="contact__content">
               <label for="subject" class="contact__label">Subject</label>
-              <input type="text" id="email" class="contact__input" />
+              <input type="text" id="email" name="subject" class="contact__input" required/>
             </div>
 
             <div class="contact__content">
@@ -884,11 +884,12 @@
                 >Message</label
               >
               <textarea
-                name=""
+                name="message"
                 cols="0"
                 rows="7"
                 id="message-contact"
                 class="contact__input"
+                required
               ></textarea>
             </div>
 
