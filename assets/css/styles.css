@@ -884,6 +884,23 @@ img {
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
 
+#contact--button {
+  display: inline-block;
+  border: none;
+  height: 63px;
+  width: 175px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  font-size: 0.938rem;
+  font-family: "Poppins", sans-serif;
+}
+
+#button--icon {
+  position: relative;
+  top: 2px;
+}
+
 /*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;
